@@ -24,8 +24,8 @@ except Exception as e:
 
 # Routes
 @app.route('/')
-def hello_world():
-    return 'Hello World!'
+def home():
+    return render_template('welcome.html')
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -123,6 +123,12 @@ def login():
 def index():
     return render_template('index.html')
 
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect('/')
 # Run the app
+
+
 if __name__ == '__main__':
     app.run(debug=True)
