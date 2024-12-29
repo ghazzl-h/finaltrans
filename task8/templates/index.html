@@ -20,7 +20,6 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="../static/assets/img/navbar-logo.svg" alt="..." /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -32,6 +31,9 @@
 <!--                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>-->
                         <li class="nav-item"><a class="nav-link" href="#team"> Family Members </a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item">
+                             <a class="nav-link" href="/logout">Logout</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -41,6 +43,9 @@
             <div class="container">
                 <div class="masthead-subheading">Welcome To Your Smart Home Monitoring System!</div>
                 <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
+                <div class="masthead-heading text-uppercase">We'll Help You Take care of
+                    <strong> {{ babydata['fname']}} {{ babydata['lname'] }}</strong> <3
+                </div>
                 <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
             </div>
         </header>
@@ -59,7 +64,13 @@
 <!--                        </span>-->
                         <br>
                         <h4 class="my-3">Temperature Range For Your Baby:</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                      <p class="text-muted">for more information<br>
+                          <form action="/redirect_based_on_age" method ="POST">
+                            <button type="submit" >
+                            Click Here
+                            </button>
+                          </form>
+                         </p>
                     </div>
 <!--                    <div class="col-md-4">-->
 <!--                        <span class="fa-stack fa-4x">-->
@@ -257,7 +268,7 @@
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="https://th.bing.com/th?id=OIP.tqUsjOY5nZlaIF-4sD-EQwHaJ9&w=215&h=289&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2" alt="parent 1" />
                             <h4>Parent 1</h4>
-                            <p class="text-muted">Name</p>
+                            <p class="text-muted">Name</p>  <strong> {{ babydata['parent1']}} </strong>
 <!--                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>-->
 <!--                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>-->
 <!--                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>-->
@@ -267,7 +278,7 @@
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="https://th.bing.com/th?id=OIP.uULzUUR2m_CtaX8JYZUR9gHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2" alt="parent 2" />
                             <h4>Parent 2</h4>
-                            <p class="text-muted">Name</p>
+                            <p class="text-muted">Name</p> <strong> {{ babydata['parent2'] }}</strong>
 <!--                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>-->
 <!--                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>-->
 <!--                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>-->
